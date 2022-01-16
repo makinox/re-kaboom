@@ -10,6 +10,10 @@
     "ws": "^8.2.0"
   },
   "scripts": {
-    "start": "node run.js"
+    "start": "node run.js",
+    "dev": "nodemon start"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
