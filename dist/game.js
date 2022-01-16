@@ -2763,7 +2763,10 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
     width: 40,
     height: 40,
     x: () => [sprite("ground"), area(), solid()],
-    "@": () => [sprite("enemy"), area(), solid(), scale(0.5)]
+    "@": () => [sprite("enemy"), area(), body(), solid(), scale(0.5), "dangerous"]
+  });
+  player.collides("dangerous", () => {
+    destroy(player);
   });
 })();
 //# sourceMappingURL=game.js.map

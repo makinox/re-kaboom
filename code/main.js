@@ -24,5 +24,9 @@ addLevel(['      ', '  @   ', '      ', 'xxxxxx'], {
   width: 40,
   height: 40,
   x: () => [sprite('ground'), area(), solid()],
-  '@': () => [sprite('enemy'), area(), solid(), scale(0.5)],
+  '@': () => [sprite('enemy'), area(), body(), solid(), scale(0.5), 'dangerous'],
 });
+
+player.collides('dangerous', () => {
+  destroy(player)
+})
