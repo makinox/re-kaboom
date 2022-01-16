@@ -4,9 +4,23 @@ import kaboom from "kaboom"
 kaboom()
 
 // load assets
-loadSprite("Alien", "sprites/Alien.png")
+loadSprite("alien", "sprites/alien.png")
+loadSprite("ground", "sprites/ground.png")
 
 
 add([
-	sprite("Alien"),
+	sprite("alien"),
+  scale(0.8),
+  pos(20,20)
 ])
+
+addLevel([
+  '     ',
+  '  @  ',
+  '     ',
+  'xxxxx',
+], {
+  width: 40,
+  height: 40,
+  'x': [sprite('ground')] 
+})
