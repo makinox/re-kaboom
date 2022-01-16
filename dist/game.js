@@ -2750,11 +2750,20 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
   Es();
   loadSprite("alien", "sprites/alien.png");
   loadSprite("ground", "sprites/ground.png");
-  add([sprite("alien"), scale(0.5), pos(20, 20)]);
+  loadSprite("enemy", "sprites/enemy.png");
+  var player = add([sprite("alien"), scale(0.5), pos(20, 20), area(), body()]);
+  var MOVE_SPEED = 200;
+  keyDown("right", () => {
+    player.move(MOVE_SPEED, 0);
+  });
+  keyDown("left", () => {
+    player.move(-MOVE_SPEED, 0);
+  });
   addLevel(["      ", "  @   ", "      ", "xxxxxx"], {
     width: 40,
     height: 40,
-    x: () => [sprite("ground")]
+    x: () => [sprite("ground"), area(), solid()],
+    "@": () => [sprite("enemy"), area(), solid(), scale(0.5)]
   });
 })();
 //# sourceMappingURL=game.js.map

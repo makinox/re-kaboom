@@ -6,11 +6,23 @@ kaboom();
 // load assets
 loadSprite('alien', 'sprites/alien.png');
 loadSprite('ground', 'sprites/ground.png');
+loadSprite('enemy', 'sprites/enemy.png');
 
-add([sprite('alien'), scale(0.5), pos(20, 20)]);
+const player = add([sprite('alien'), scale(0.5), pos(20, 20), area(), body()]);
+
+const MOVE_SPEED = 200
+
+keyDown('right', () => {
+  player.move(MOVE_SPEED, 0)
+})
+
+keyDown('left', () => {
+  player.move(-MOVE_SPEED, 0)
+})
 
 addLevel(['      ', '  @   ', '      ', 'xxxxxx'], {
   width: 40,
   height: 40,
-  x: () => [sprite('ground')],
+  x: () => [sprite('ground'), area(), solid()],
+  '@': () => [sprite('enemy'), area(), solid(), scale(0.5)],
 });
