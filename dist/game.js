@@ -2748,15 +2748,9 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
 
   // code/main.js
   Es();
-  loadSprite("bean", "sprites/bean.png");
+  loadSprite("Alien", "sprites/Alien.png");
   add([
-    sprite("bean"),
-    pos(80, 40),
-    area()
+    sprite("Alien")
   ]);
-  onClick(() => {
-    addKaboom(mousePos());
-  });
-  onKeyPress("b", burp);
 })();
 //# sourceMappingURL=game.js.map
