@@ -1771,6 +1771,11 @@ json-schema-traverse@^1.0.0:
   resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz#ae7bcb3656ab77a73ba5c49bf654f38e6b6860e2"
   integrity sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==
 
+kaboom@^2000.1.8:
+  version "2000.1.8"
+  resolved "https://registry.yarnpkg.com/kaboom/-/kaboom-2000.1.8.tgz#1736d0c0f2ee3f2b8c7adcee60b858352546785b"
+  integrity sha512-NNndGkxZ2Wa+BjPU4DEMMVrwAtUOOiIrnqqyPneExPXo+t3ixOtZEGZ7gUZG3oILnqzCcTSeNyHeZYjPfT37Bg==
+
 kind-of@^6.0.2:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
